@@ -128,6 +128,11 @@ endif ()
 
 project(freetype C)
 
+if (${CMAKE_SYSTEM_NAME} MATCHES "Emscripten")
+    set(CMAKE_C_COMPILER "emcc")
+    set(CMAKE_C_FLAGS "${CMAKE_C_FLAGS} -s USE_ZLIB=1")
+endif()
+
 set(VERSION_MAJOR "2")
 set(VERSION_MINOR "9")
 set(VERSION_PATCH "1")
