@@ -3,9 +3,7 @@ set -e
 
 BUILD_DIR=build/web
 EMSDK=$(printenv EMSDK)
-
 PATH=$EMSDK/fastcomp/emscripten:$PATH
-
 TOOLCHAIN=$EMSDK/fastcomp/emscripten/cmake/Modules/Platform/Emscripten.cmake
 
 mkdir -p $BUILD_DIR
